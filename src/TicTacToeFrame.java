@@ -6,25 +6,12 @@ import java.util.Random;
 public class TicTacToeFrame extends JFrame {
     JPanel mainPnl;
     JPanel titlePnl;  // Top
-    JPanel statsPnl;
-    JPanel resultsPnl; // Center
-    JPanel controlPnl; // Bottom
 
     JPanel boardPnl;
     private JButton ticTacToeButtons[] =  new JButton[9];
     private ButtonStatus buttonStatus[] = new ButtonStatus[9];
 
-    JTextArea resultsTA;
-    JScrollPane scroller;
-
-
     JLabel titleLbl;
-    ImageIcon icon;
-
-    JButton rockBtn;
-    JButton paperBtn;
-    JButton scissorsBtn;
-    JButton quitBtn;
 
     enum ButtonStatus {
         STATUS_UNSET,
@@ -180,7 +167,7 @@ public class TicTacToeFrame extends JFrame {
     private void createTitlePanel()
     {
         titlePnl = new JPanel();;
-        titleLbl = new JLabel("Tic Tac Toe Game", icon, JLabel.CENTER);
+        titleLbl = new JLabel("Tic Tac Toe Game", JLabel.CENTER);
         titleLbl.setVerticalTextPosition(JLabel.BOTTOM);
         titleLbl.setHorizontalTextPosition(JLabel.CENTER);
         titlePnl.add(titleLbl);
